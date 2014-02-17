@@ -198,3 +198,184 @@ Exponent | `c = a ^ b` |	`c = a ** b`
 ##Comparison operators
 
 Again the usual range of comparison operators are found in Python, examples are shown in the table below.  Notice that both `<>` and `!=` can be used to test for inequality in Python and that equality uses the double equal `==` sign.
+
+* Visual Basic:
+  ```vb
+  If a = b Then 'Equality
+  	MsgBox "a is equal to b"
+  End If
+  
+  If a <> b Then 'Inequality
+  	MsgBox "a not equal to b"
+  End If
+  
+  If a > b Then 'Greater
+  	MsgBox "a greater than b"
+  End If
+  
+  If a < b Then 'Less
+  	MsgBox "a less than b"
+  End If
+  
+  If a >= b Then 'Greater or equal
+  	MsgBox "a greater or equal to b"
+  End If
+  
+  If a <= b Then 'Less or equal
+  	MsgBox "a less than or equal to b"
+  End If
+  ```
+* Python:
+  ```python
+  #!/usr/bin/python
+  if a == b: #Equality
+  	print "a is equal to b"
+  
+  if a != b: #Inequality
+  	print "a not equal to b"
+  
+  if a <> b: #Inequality
+  	print "a not equal to b"
+  	
+  if a > b: #Greater
+  	print "a greater than b"
+  
+  if a < b: #Less
+  	print "a less than b"
+  
+  if a >= b: #Greater or equal
+  	print "a greater or equal to b"
+  	
+  if a <= b: #Less or equal
+  	print "a less than or equal to b"
+  ```
+
+##While loops
+
+The Python while loop is quite like the "do while" loop in Visual Basic.
+
+* Visual Basic:
+  ```vb
+  Dim counter As Integer
+  counter = 1
+  
+  Do While counter <= 10
+  	MsgBox counter
+  	counter = counter + 1
+  Loop
+  ```
+* Python:
+  ```python
+  #!/usr/bin/python
+  counter = 1
+  
+  while counter <= 10:
+  	print counter
+  	counter = counter + 1
+  ```
+
+Execution does not enter the loop unless the while condition is met.  If the counter variable in the example above was already set to 11 then the entire loop would be skipped.
+
+##For loops
+
+The for loop in Python is extremely versatile and can be used to iterate over all manner of data such as lists (arrays), strings and dictionary objects.  There is no equivalent of the standard Visual Basic for loop in Python, there is only an equivalent of the *for each* loop.
+
+Below is an example of a simple count from 1 to 3.  In Visual Basic the standard for loop is used.  In Python though we have to cheat a bit and create a list of numbers to iterate over.
+
+* Visual Basic:
+  ```vb
+  Dim i As Integer
+  
+  For i = 1 To 3
+  	MsgBox i
+  Next i
+  ```
+* Python:
+  ```python
+  #!/usr/bin/python
+  lst = range(1,4)
+  for i in lst:
+  	print i
+
+  ```
+
+Notice the use of the `in` keyword on the Python side.  The variable `lst` is actually a list containing the integers 1 to 3.  It's created by the range function by passing in the number to start from and the number to stop at (so stopping at 4 leaves 3 as the final number).
+
+A more accurate comparison would be this code below.
+
+* Visual Basic:
+  ```vb
+  Dim col As Collection
+  Set col = New Collection
+  
+  col.Add 1
+  col.Add 2
+  col.Add 3
+  
+  For Each num In col
+  	MsgBox num
+  Next num
+  ```
+* Python:
+  ```python
+  #!/usr/bin/python
+  lst = range(1,4)
+  for num in lst:
+  	print num
+  
+  #A shorter way to do the same
+  for num in range(1,4):
+  	print num
+  ```
+
+##Collections and arrays
+
+In Python *lists* are somewhat similar to Collections in Visual Basic.  They have a number of built in functions to allow you to manipulate them.
+
+* Visual Basic:
+  ```vb
+  Dim col As Collection
+  Set col = New Collection
+  
+  col.Add "Cat"
+  col.Add "Dog"
+  col.Add "Rabbit"
+  
+  col.Remove 1
+  
+  MsgBox col.count
+  ```
+* Python:
+  ```python
+  #!/usr/bin/python
+  lst = [] #An empty list
+  
+  lst.append("Cat")
+  lst.append("Dog")
+  lst.append("Rabbit")
+  
+  lst.remove("Cat")
+  
+  print len(lst)
+  ```
+
+Python lists can also be initialised with data on a single line of code in a similar manner to Visual Basic variant arrays.  The code below on the Python side will produce an identical list to the example above which was built using the append method.  Either way is valid, it’s just down to personal preference.
+
+* Visual Basic:
+  ```vb
+  Dim vArray As Variant
+  vArray = Array("Cat", "Dog", "Rabbit")
+  
+  MsgBox vArray(0)
+  MsgBox vArray(1)
+  ```
+* Python:
+  ```python
+  #!/usr/bin/python
+  lst = ["Cat", "Dog", "Rabbit"]
+  
+  print lst[0]
+  print lst[1]
+  ```
+
+Notice the use of square brackets on the Python side.  Square brackets `[n]` are used to both define and index Python lists whereas curved brackets `(n)` are used in Visual Basic.
