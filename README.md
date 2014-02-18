@@ -379,3 +379,283 @@ Python lists can also be initialised with data on a single line of code in a sim
   ```
 
 Notice the use of square brackets on the Python side.  Square brackets `[n]` are used to both define and index Python lists whereas curved brackets `(n)` are used in Visual Basic.
+
+##Functions
+
+Function blocks in Python are actually simpler than in Visual Basic.  In VB you have two types (`Sub` and `Function`) along with two modes of parameter (`ByVal` and `ByRef`).  In Python there is only one way to define a function which is the `def` keyword, parameters are always passed by reference and they are not typed.
+
+Below is a comparison between a `Sub` function in Visual Basic (a function where there is no return value) and the equivalent Python code.
+
+* Visual Basic:
+  ```vb
+  Sub PrintMe(ByRef s As String)
+    MsgBox s
+  End Sub
+  
+  PrintMe "first time"
+  PrintMe "second time"
+  ```
+* Python:
+  ```python
+  #!/usr/bin/python
+  def printme(s):
+    print s
+  
+  printme("first time")
+  printme("second time")
+  ```
+
+When a value needs to be returned in Visual Basic the `Function` keyword is used instead of `Sub`.  In Python there is no difference in how you define a function.  In VB the return value is set by assigning to the function name (`Sum = a + b`) whereas the `return` command is simply used to do this in Python (`return a + b`).  Compare the code below.
+
+* Visual Basic:
+  ```vb
+  Function Sum(ByRef a As Integer, ByRef b As Integer) As Integer
+      Sum = a + b
+  End Function
+  
+  MsgBox Sum(5, 10)
+  MsgBox Sum(10, 20)
+  ```
+* Python:
+  ```python
+  #!/usr/bin/python
+  def sum(a, b):
+  	return a + b
+  
+  print sum(5, 10)
+  print sum(10, 20)
+  ```
+
+Optional function parameters are also possible in Python in the same way as Visual Basic.  In VB the `Optional` keyword is used and a default value is supplied (`= 0`).  In Python only the default value is required to make the parameter optional.
+
+* Visual Basic:
+  ```vb
+  Sub ShowInfo(ByRef name As String, Optional ByRef age As Integer = 0)
+  	MsgBox name
+  	If age > 0 Then
+  		MsgBox age
+  	End If
+  End Sub
+  
+  ShowInfo "John"
+  ShowInfo "John", 30
+  ```
+* Python:
+  ```python
+  #!/usr/bin/python
+  def showinfo(name, age = 0):
+  	print name
+  	if age > 0:
+  		print age
+  
+  showinfo("John")
+  showinfo("John", 30)
+  ```
+
+##Error handling
+
+In Python runtime errors are called *exceptions*.  Python exception handling is actually a lot more sophisticated than the error handling in Visual Basic.  In VB the `On Error GoTo Label` statement is used along with an `Exit` to stop execution from going past said label.  Python uses a `try` block with one or more `except` clauses to test for different kinds of error.  The `else` clause runs if no exception occurs.  The `finally` block will always run regardless of what errors occur, ideal for closing files.
+
+* Visual Basic:
+  ```vb
+  On Error GoTo ErrLabel
+  
+  Dim fso As New FileSystemObject
+  Dim f As TextStream
+  
+  Set f = fso.CreateTextFile("test.txt")
+  
+  f.Write("Test Data")
+  f.Close
+  
+  Exit Sub/Function
+  
+  ErrLabel:
+  f.Close
+  MsgBox "Error:" & Err.Description 
+  ```
+* Python:
+  ```python
+  #!/usr/bin/python
+  try:
+  	f = open("test.txt", "w")
+  	f.write("Test Data")
+  except IOError as e:
+  	print "IO error:", e
+  except:
+  	print "unknown error"
+  else:
+  	print "success"
+  finally:
+  	f.close()
+
+  ```
+
+##Module and Class files
+
+In Visual Basic modules and classes, `.mod` and `.cls`, are clearly separated out by the tree view of the development environment.  They represent separate files that contain code.  Module files hold one or more utility functions and class files contain the definition of a single OO object.
+
+In Python there is no direct equivalent of this structure since all Python files have the `.py` extension.  It is possible to organise your code into numerous files and access them all from one place though.  This is done using the `from` keyword.
+
+Consider the example below.  The file `mymodule.py` contains one function called `getanimals`.
+
+```python
+#!/usr/bin/python
+
+def getanimals():
+	lst = [] #An empty list
+	lst.append("Cat")
+	lst.append("Dog")
+	lst.append("Rabbit")
+	return lst
+```
+
+If you have multiple files the convention in Python is to name the entry point of the program (the file to be executed) `main.py`.  In main we want to access the `getanimals` function which is in `mymodule.py`.   The `from <file> import *` syntax is used.  Notice that the `.py` is not required here.
+
+```python
+#!/usr/bin/python
+
+from mymodule import *
+
+for animal in getanimals():
+	print animal
+```
+
+Note that you will see `.pyc` files appearing with the same file name as the imported files (such as `mymodule.pyc`).  This is a Python byte code file and is essentially a compiled version of the source code.
+
+##Object oriented programming
+
+Python has excellent object oriented programming capabilities.  Classes also live in `.py` files in the same way as the module example above (and can be imported in the same way).  However their syntax structure is quite different to how it works in Visual Basic.  Below is a comparison between two *person* classes.
+
+**Visual Basic** `clsPerson.cls`
+```vb
+Private m_name As String
+
+Private Sub Class_Initialize()
+	'Start up code here if needed
+	m_name = ""
+End Sub
+
+Public Property Let Name(value As String)
+	m_name = value
+End Property
+
+Public Property Get Name() As String
+	Name = m_name
+End Property
+
+Public Sub Display()
+	MsgBox Me.Name
+End Sub
+```
+
+In VB the `Me` keyword can be used to access the current object or form properties.  Notice in the `Display` method where it is used above.
+
+The following VB code would then be used to create an instance of the person class.
+
+```vb
+Dim obj As New clsPerson
+obj.Name = "David"
+obj.Display
+```
+
+In Python a class first needs to be defined with the class statement followed by a name, see the example below.  The first function `__init__` is the same as `Class_Initialize` in Visual Basic.  It runs when a new instance of the class is created in memory.  Notice the `self` statement, this is equivalent to the Visual Basic `Me` keyword and allows you to access properties of the current object.
+
+When you define functions inside a class the `self` object must always be specified as the first parameter.  You don't have to explicitly specify it when calling the functions though Python does this behind the scenes for you.
+
+There is also no concept of `Public` or `Private` class members in Python.  Everything is public and that means that the `setName` and `getName` functions below are redundant.  They are just there for comparisons to the Visual Basic code. 
+
+**Python** `person.py`
+```python
+#!/usr/bin/python
+class person:
+	def __init__(self):
+		#Start up code here if needed
+		self.name = ""
+
+	def setName(self, value):
+		self.name = value
+
+	def getName(self):
+		return self.name
+
+	def display(self):
+		print self.name
+```
+
+So instead of having a private variable `m_name` with public get and set functions you can simply just define a variable as a member of self, `self.name = ""`, and it will then be publically accessible outside of the object.
+
+```python
+#!/usr/bin/python
+
+from person import *
+
+obj = person()
+obj.name = "David" #or also; obj.setName("David")
+obj.display()
+```
+
+If you have a situation where you want code to run as a property is being set or read then you will need to use a set or get function.  For example if you wanted to prevent negative numbers from being set on an *age* property for the person class.
+
+* Visual Basic:
+  ```vb
+  Private m_age As Integer
+  
+  Public Property Let Age(value As Integer)
+  	If value >= 0 Then
+  		m_age = value
+  	End If
+  End Property
+  ```
+* Python:
+  ```python
+  #!/usr/bin/python
+  def setAge(self, value):
+  	if value >= 0:
+  		self.age = value
+  
+  ```
+
+Despite having the setAge function to constrain how `self.age` is set inside the class there is actually nothing to stop you from going `obj.age = -1` from outside the class and bypassing that logic.
+
+However there is a convention in Python to indicate that a variable should not be touched from outside a class.  Using a double underscore, for example `self.__age`, is how this is done.  This generally warns anyone consuming your code to stay away from that variable despite the fact that they're not prevented from using it.
+
+##Libraries and References (DLLs)
+
+![image](./images/vba-references.png "VB Project References")
+
+In Visual Basic its common practise to access pre made code from dynamic link libraries through the **Tools / References** menu option (see above).  DLL files are a Microsoft specific paradigm and are not used in Python on the Raspberry Pi because of the Linux based OS.  Instead Python comes with numerous code libraries (also written in the Python language) which you can just import into your program.  They cover almost everything you would ever need.
+
+On the Raspberry Pi these libraries are found in the `/usr/lib/pyshared` and `/usr/lib directories`.  They can be easily accessed from your code using the `import` statement, you can have as many import statement in your program as is necessary.  Here are some examples.
+
+```python
+#!/usr/bin/python
+import random
+print random.randint(0,9) #Between 0 and 9
+```
+
+```python
+#!/usr/bin/python
+import datetime
+a = datetime.datetime.now()
+b = a + datetime.timedelta(1,0,0,0) #Add one whole day
+print b
+```
+
+```python
+#!/usr/bin/python
+import math
+x = 5
+y = 10
+hypotenuse = math.sqrt((x * x) + (y * y))
+```
+
+```python
+#!/usr/bin/python
+import MySQLdb
+db = MySQLdb.connect("localhost", "appuser", "", "TestDB")
+cursor = db.cursor()
+cursor.execute("SELECT * FROM TABLE")
+```
+
+For a more extensive list of Python modules please visit this page: https://wiki.python.org/moin/UsefulModules
