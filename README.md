@@ -382,7 +382,7 @@ Notice the use of square brackets on the Python side.  Square brackets `[n]` are
 
 ##Functions
 
-Function blocks in Python are actually simpler than in Visual Basic.  In VB you have two types (`Sub` and `Function`) along with two modes of parameter (`ByVal` and `ByRef`).  In Python there is only one way to define a function which is the `def` keyword, parameters are always passed by reference and they are not typed.
+Function blocks in Python are actually simpler than in Visual Basic.  In VB you have two types, `Sub` and `Function`, along with two modes of parameter, `ByVal` and `ByRef`.  In Python there is only one way to define a function which is the `def` keyword, parameters are always passed by reference and they are not typed.
 
 Below is a comparison between a `Sub` function in Visual Basic (a function where there is no return value) and the equivalent Python code.
 
@@ -405,7 +405,7 @@ Below is a comparison between a `Sub` function in Visual Basic (a function where
   printme("second time")
   ```
 
-When a value needs to be returned in Visual Basic the `Function` keyword is used instead of `Sub`.  In Python there is no difference in how you define a function.  In VB the return value is set by assigning to the function name (`Sum = a + b`) whereas the `return` command is simply used to do this in Python (`return a + b`).  Compare the code below.
+When a value needs to be returned in Visual Basic the `Function` keyword is used instead of `Sub`.  In Python there is no difference in how you define a function.  In VB the return value is set by assigning to the function name, `Sum = a + b`, whereas the `return` command is simply used to do this in Python, `return a + b`.  Compare the code below.
 
 * Visual Basic:
   ```vb
