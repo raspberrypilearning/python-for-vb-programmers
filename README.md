@@ -1,9 +1,9 @@
-Python for Visual Basic programmers
-=========================
+#Python for Visual Basic programmers
+
 
 A Python introduction for Visual Basic programmers.
 
-![image](./images/cover.jpg "Cover")
+![](./images/cover.jpg "Cover")
 
 ##Introduction
 
@@ -19,14 +19,14 @@ This introduction is intended to help a Visual Basic programmer apply their exis
 
 You may already have a preferred programming environment (the program to write code in); if you do not, Geany is recommended.
 
-[![image](./images/geany.png)](http://www.geany.org/)
+[![](./images/geany.png)](http://www.geany.org/)
 
 Raspbian does not come with Geany so you have to install it.
 To do this open up LXTerminal and enter the command below: 
 
 `sudo apt-get install geany`
 
-After the installation has completed you should find Geany inside the `Programming` folder of the launcher menu.  To start a new Python program go to **File > New (with Template) > main.py**
+After the installation has completed you should find Geany inside the 'Programming' folder of the launcher menu.  To start a new Python program go to File > New (with Template) > main.py
 
 Geany populates this with some template text (a copyright statement) and some function blocks at the bottom, but you can delete everything except the first line to start afresh.  The first line is important because it denotes the file as a Python program.  The cogs icon at the top is the familiar run button (F5) similar to Visual Basic.
 
@@ -38,7 +38,7 @@ print "hello world"
 
 ###Command line
 
-If you prefer the command line you can easily create a Python program using `nano` or `vim`.  Nano and Vim are terminal-based text editors.  For example, enter the following command:
+If you prefer the command line you can easily create a Python program using nano or vim; these are terminal-based text editors.  For example, enter the following command:
 
 `nano test.py`
 
@@ -49,7 +49,7 @@ Enter the following lines of code into the file.  The first line specifies that 
 print "hello world"
 ```
 
-Press `Ctrl – O` to save then `Ctrl – X` to quit.  Next, mark the file as executable and then run it.
+Press Ctrl–O to save then Ctrl–X to quit.  Next, mark the file as executable and then run it.
 
 ```
 chmod +x test.py
@@ -60,7 +60,7 @@ You only need to use the `chmod` command once per Python file.  It will remain e
 
 ##Basic data types
 
-Python supports a wide range of data types; see the table below.  Whereas Visual Basic requires variables to be defined along with their type, *Python does not*.
+Python supports a wide range of data types; see the table below.  Whereas Visual Basic requires variables to be defined along with their type, Python does not.
 
 Data type | Visual Basic | Python 
 --- | --- | ---
@@ -117,7 +117,7 @@ Python does not use begin and end tags to group lines of code into functions, lo
     print "Hello"
   ```
 
-The colon in the Python code after the if-statement is mandatory; it can help to think of it as similar to the "then" keyword in Visual Basic.
+The colon in the Python code after the if-statement is mandatory; it can help to think of it as similar to the 'then' keyword in Visual Basic.
 
 Programs like Geany help you with indentation; pressing enter after the colon will automatically indent the cursor.  If you're using the command line, however, you'll need to ensure the indentation is correctly entered.
 
@@ -150,7 +150,7 @@ You can either use multiple space characters or a tab character for indentation;
 
 Understanding the rules of indentation is fundamental to Python; it can be a stumbling block for pupils.  Pupils often do not understand what white space is; they therefore need to be shown that spaces and tabs are real text characters which are normally invisible in text editors.   They serve a purpose and are saved along with the text in a document file.  Pupils could be asked how the computer remembers where the white space is in a text file.
 
-![image](./images/msword-paragraph.png "Microsoft Word Paragraph Button")
+![](./images/msword-paragraph.png "Microsoft Word Paragraph Button")
 
 It can also be helpful to offer a quick demonstration in Microsoft Word where some code is typed out and the paragraph toolbar button (above) is used to show the hidden characters.  Space characters then show as a dot and tab characters show as an arrow.
 
@@ -252,7 +252,7 @@ Again, the usual range of comparison operators are found in Python; examples are
 
 ##While loops
 
-The Python while loop is similar to the "do while" loop in Visual Basic.
+The Python while loop is similar to the 'do while' loop in Visual Basic.
 
 * Visual Basic:
   ```vb
@@ -278,7 +278,7 @@ Execution does not enter the loop unless the while condition is met.  If the cou
 
 ##For loops
 
-The for loop in Python is extremely versatile and can be used to iterate over all manner of data such as lists (arrays), strings and dictionary objects.  There is no equivalent of the standard Visual Basic for loop in Python; there is only an equivalent of the "for each" loop.
+The for loop in Python is extremely versatile and can be used to iterate over all manner of data such as lists (arrays), strings and dictionary objects.  There is no equivalent of the standard Visual Basic for loop in Python; there is only an equivalent of the 'for each' loop.
 
 Below is an example of a simple count from 1 to 3.  In Visual Basic the standard for loop is used; in Python, however, we must create a list of numbers to iterate over.
 
@@ -405,7 +405,7 @@ Below is a comparison between a `Sub` function in Visual Basic (a function where
   printme("second time")
   ```
 
-When a value needs to be returned in Visual Basic the `Function` keyword is used instead of `Sub`.  In Python there is no difference in how a function is defined.  In VB the return value is set by assigning to the function name, `Sum = a + b`; whereas Python uses the `return` command to do this, `return a + b`.  Compare the code below.
+When a value needs to be returned in Visual Basic the `Function` keyword is used instead of `Sub`.  In Python there is no difference in how a function is defined.  In VB the return value is set by assigning to the function name, `Sum = a + b`; Python uses the `return` command to do this, `return a + b`.  Compare the code below.
 
 * Visual Basic:
   ```vb
@@ -454,7 +454,7 @@ Optional function parameters are also possible in Python in the same way as Visu
 
 ##Error handling
 
-In Python runtime errors are called *exceptions*; Python exception handling is more sophisticated than the error handling in Visual Basic.  In VB the `On Error GoTo Label` statement is used along with an `Exit` to stop execution from going past the label.  Python uses a `try` block with one or more `except` clauses to test for different kinds of error.  The `else` clause runs if no exception occurs.  The `finally` block will always run regardless of what errors occur, and is therefore ideal for closing files.
+In Python runtime errors are called exceptions; Python exception handling is more sophisticated than the error handling in Visual Basic.  In VB the `On Error GoTo Label` statement is used along with an `Exit` to stop execution from going past the label.  Python uses a `try` block with one or more `except` clauses to test for different kinds of error.  The `else` clause runs if no exception occurs.  The `finally` block will always run regardless of what errors occur, and is therefore ideal for closing files.
 
 * Visual Basic:
   ```vb
@@ -527,7 +527,7 @@ Note that you will see `.pyc` files appearing with the same file name as the imp
 
 Python has excellent object oriented programming capabilities.  Classes are also kept in `.py` files in the same way as the module example above (and can be imported in the same way).  However, their syntax structure is quite different to Visual Basic.  Below is a comparison between two 'person' classes.
 
-**Visual Basic** `clsPerson.cls`
+* Visual Basic `clsPerson.cls`
 ```vb
 Private m_name As String
 
@@ -565,7 +565,7 @@ When you define functions inside a class the `self` object must always be specif
 
 There is also no concept of `Public` or `Private` class members in Python.  Everything is public, therefore the `setName` and `getName` functions below are redundant; they remain only for comparison to the Visual Basic code. 
 
-**Python** `person.py`
+* Python `person.py`
 ```python
 #!/usr/bin/python
 class person:
@@ -595,7 +595,7 @@ obj.name = "David" #or also; obj.setName("David")
 obj.display()
 ```
 
-If you require code to run as a property is being set or read then you will need to use a set or get function.  For example, you may need this if you wanted to prevent negative numbers from being set on an *age* property for the person class below.
+If you require code to run as a property is being set or read then you will need to use a set or get function.  For example, you may need this if you wanted to prevent negative numbers from being set on an age property for the person class below.
 
 * Visual Basic:
   ```vb
@@ -622,9 +622,9 @@ However, there is a convention in Python to indicate that a variable should not 
 
 ##Libraries and References (DLLs)
 
-![image](./images/vba-references.png "VB Project References")
+![](./images/vba-references.png "VB Project References")
 
-In Visual Basic it's common practice to access pre-made code from dynamic link libraries through the **Tools / References** menu option as above.  DLL files are a Microsoft-specific paradigm, and are not used in Python on the Raspberry Pi due to its Linux-based OS.  Instead Python comes with numerous code libraries (also written in the Python language), which you can import into your program and cover a wide range of requirements.
+In Visual Basic it's common practice to access pre-made code from dynamic link libraries through the Tools / References menu option as above.  DLL files are a Microsoft-specific paradigm, and are not used in Python on the Raspberry Pi due to its Linux-based OS.  Instead Python comes with numerous code libraries (also written in the Python language), which you can import into your program and cover a wide range of requirements.
 
 On the Raspberry Pi these libraries are found in the `/usr/lib/pyshared` and `/usr/lib directories`.  They can be easily accessed from your code using the `import` statement; you can have as many import statements in your program as required.  Here are some examples:
 
