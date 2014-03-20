@@ -49,7 +49,7 @@ Enter the following lines of code into the file.  The first line specifies that 
 print "hello world"
 ```
 
-Press Ctrl–O to save then Ctrl–X to quit.  Next, mark the file as executable and then run it.
+Press `Ctrl + O` to save then `Ctrl + X` to quit.  Next, mark the file as executable and then run it.
 
 ```
 chmod +x test.py
