@@ -1,5 +1,4 @@
-#Python for Visual Basic programmers
-
+# Python for Visual Basic programmers
 
 A Python introduction for Visual Basic programmers.
 
@@ -7,7 +6,7 @@ A Python introduction for Visual Basic programmers.
 
 ## Introduction
 
-Python is a widely-used high level programming language. Its elegant syntax allows you to clearly define application behaviour using fewer lines of code than would be required in other languages like VB. It supports multiple programming paradigms including imperative, functional and object oriented styles, allowing a wide range of tasks to be performed. 
+Python is a widely-used high level programming language. Its elegant syntax allows you to clearly define application behaviour using fewer lines of code than would be required in other languages like VB. It supports multiple programming paradigms including imperative, functional and object oriented styles, allowing a wide range of tasks to be performed.
 
 As a Visual Basic programmer, the first thing you will notice is the lack of form designer; Python is programmed in text only. You could still write desktop applications with buttons and menus, but the form layout must be described in code. This is, however, outside the scope of this document. Programs written in Python often don’t require a desktop interface, as will be discussed later.
 
@@ -23,7 +22,7 @@ You may already have a preferred programming environment (the program to write c
 
 Raspbian does not come with Geany so you have to install it.
 
-To do this open up LXTerminal and enter the command below: 
+To do this open up LXTerminal and enter the command below:
 
 `sudo apt-get install geany`
 
@@ -64,7 +63,7 @@ You only need to use the `chmod` command once per Python file. It will remain ex
 
 Python supports a wide range of data types; see the table below. Whereas Visual Basic requires variables to be defined along with their type, Python does not.
 
-Data type | Visual Basic | Python 
+Data type | Visual Basic | Python
 --- | --- | ---
 Integer number | `Dim count As Integer` | `count = 1`
 Floating point number | `Dim distance As Double` | `distance = 2.5`
@@ -188,7 +187,7 @@ Below is an example of two nested if-statements in Visual Basic and Python for c
 
 The usual range of arithmetic operators are present in Python. Examples of their use are shown in the table below along with Visual Basic code for comparison.
 
-Operator | Visual Basic | Python 
+Operator | Visual Basic | Python
 --- | --- | ---
 Add | `c = a + b` | `c = a + b`
 Subtract | `c = a - b` | `c = a - b`
@@ -498,7 +497,7 @@ In Python runtime errors are called exceptions; Python exception handling is mor
 
     ErrLabel:
     f.Close
-    MsgBox "Error:" & Err.Description 
+    MsgBox "Error:" & Err.Description
     ```
 
 - Python:
@@ -587,7 +586,7 @@ In Python a class first needs to be defined with the `class` statement followed 
 
 When you define functions inside a class the `self` object must always be specified as the first parameter. You don't have to explicitly specify it when calling the functions; Python does this behind the scenes for you.
 
-There is also no concept of `Public` or `Private` class members in Python. Everything is public, therefore the `setName` and `getName` functions below are redundant; they remain only for comparison to the Visual Basic code. 
+There is also no concept of `Public` or `Private` class members in Python. Everything is public, therefore the `setName` and `getName` functions below are redundant; they remain only for comparison to the Visual Basic code.
 
 - Python `person.py`
 
@@ -682,3 +681,13 @@ cursor.execute("SELECT - FROM TABLE")
 ```
 
 For a more extensive list of Python modules please visit this page: https://wiki.python.org/moin/UsefulModules
+
+## Licence
+
+Unless otherwise specified, everything in this repository is covered by the following licence:
+
+![Creative Commons License](http://i.creativecommons.org/l/by-sa/4.0/88x31.png)
+
+***Python for Visual Basic Programmers*** by the [Raspberry Pi Foundation](http://raspberrypi.org) is licenced under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+
+Based on a work at https://github.com/raspberrypilearning/python-for-vb-programmers
