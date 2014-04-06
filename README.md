@@ -100,6 +100,7 @@ Dave
 Python does not use begin and end tags to group lines of code into functions, loops or if-statements. It uses white space indentation only and this is rigidly enforced. Compare the two code samples below:
 
 - Visual Basic:
+
 ```vb
 Dim count As Integer
 count = 1
@@ -108,7 +109,9 @@ If count > 0 Then
     MsgBox "Hello"
 End If
 ```
+
 - Python:
+
 ```python
 count = 1
 
@@ -191,8 +194,9 @@ Operator | Visual Basic | Python
 --- | --- | ---
 Add | `c = a + b` | `c = a + b`
 Subtract | `c = a - b` | `c = a - b`
-Multiply | `c = a - b` | `c = a - b`
-Divide | `c = a / b` | `c = a / b`<br/>`c = a // b # Floor`
+Multiply | `c = a * b` | `c = a * b`
+Divide (true) | `c = a / b` | `c = a / b`
+Divide (floor) | `c = a \ b` | `c = a // b`
 Modulus division | `c = a Mod b`  | `c = a % b`
 Exponent | `c = a ^ b` |  `c = a *- b`
 
