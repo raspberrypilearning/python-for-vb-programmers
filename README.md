@@ -437,7 +437,7 @@ When a value needs to be returned in Visual Basic the `Function` keyword is used
     MsgBox Sum(10, 20)
     ```
 
-    - Python:
+- Python:
 
     ```python
     def sum(a, b):
@@ -463,7 +463,7 @@ Optional function parameters are also possible in Python in the same way as Visu
     ShowInfo "John", 30
     ```
 
-    - Python:
+- Python:
 
     ```python
     def show_info(name, age=0):
