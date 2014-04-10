@@ -8,7 +8,7 @@ A Python introduction for Visual Basic programmers.
 
 Python is a widely-used high level programming language. Its elegant syntax allows you to clearly define application behaviour using fewer lines of code than would be required in other languages like VB. It supports multiple programming paradigms including imperative, functional and object oriented styles, allowing a wide range of tasks to be performed.
 
-As a Visual Basic programmer, the first thing you will notice is the lack of form designer; Python is programmed in text only. You could still write desktop applications with buttons and menus, but the form layout must be described in code. This is, however, outside the scope of this document. Programs written in Python often don’t require a desktop interface, as will be discussed later.
+As a Visual Basic programmer, the first thing you will notice is the lack of the form designer; Python is programmed in text only. You could still write desktop applications with buttons and menus, but the form layout must be described in code. This is, however, outside the scope of this document. Programs written in Python often don’t require a desktop interface, as will be discussed later.
 
 This introduction is intended to help a Visual Basic programmer apply their existing programming knowledge and experience to the world of Python on the Raspberry Pi. This is by no means an exhaustive guide to Python. For comprehensive documentation please visit: http://docs.python.org/2.7/
 
@@ -47,6 +47,7 @@ nano test.py
 Enter the following lines of code into the file. The first line specifies that the file is a Python program.
 
 ```python
+#!/usr/bin/python
 print "hello world"
 ```
 
