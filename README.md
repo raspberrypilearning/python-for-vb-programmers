@@ -124,7 +124,8 @@ The colon in the Python code after the `if` statement is mandatory; it can help 
 
 Programs like Geany help you with indentation; pressing enter after the colon will automatically indent the cursor. If you're using the command line, however, you'll need to ensure the indentation is correctly entered.
 
-You can either use multiple space characters or a tab character for indentation; tab characters tend to be more reliable. If you prefer to use spaces then the number of spaces in the indentation can be variable, as long as they remain constant in each code block. Compare the examples below.
+You can either use multiple space characters or a tab character for indentation. If you prefer to use spaces then the number of spaces in the indentation can be variable, as long as they remain constant in each code block. Compare the examples below.
+Most Python programmers use 4 spaces in their code. While it is not strictly enforced, it is a widely accepted convention.
 
 - This will work:
 
@@ -513,13 +514,15 @@ In Python runtime errors are called exceptions; Python exception handling is mor
         f.write("Test Data")
     except IOError as e:
         print "IO error:", e
-    except:
+    except Exception:
         print "unknown error"
     else:
         print "success"
     finally:
         f.close()
     ```
+
+While technically possible, it is advised not to used "except:" without specifying anything, since it can introduce subtle bugs. "except Exception:" is more robust.
 
 ## Module and Class files
 
@@ -539,13 +542,14 @@ def get_animals():
     return animals
 ```
 
-If you have multiple files, the convention in Python is to name the entry point of the program (the file to be executed) `main.py`. In `main` we want to access the `get_animals` function which is in `mymodule.py`.  The `from <file> import *` syntax is used. Notice that the `.py` is not required here.
+If you have multiple files, the convention in Python is to name the entry point of the program (the file to be executed) `main.py`. In `main` we want to access the `get_animals` function which is in `mymodule.py`.  The `from <file> import <thing>` syntax is used. Notice that the `.py` is not required here.
+Importing several "things" can be done by listing the things, using commas to separate them, like `from <file> import thing1, thing2, thing3`.
 
 ```python
-from mymodule import *
+from mymodule import get_animals
 
 for animal in get_animals():
-  print animal
+    print animal
 ```
 
 Note that you will see `.pyc` files appearing with the same file name as the imported files (such as `mymodule.pyc`). This is a Python byte code file and is essentially a compiled version of the source code.
