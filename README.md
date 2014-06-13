@@ -200,7 +200,7 @@ Multiply | `c = a * b` | `c = a * b`
 Divide (true) | `c = a / b` | `c = a / b`
 Divide (floor) | `c = a \ b` | `c = a // b`
 Modulus division | `c = a Mod b`  | `c = a % b`
-Exponent | `c = a ^ b` |  `c = a *- b`
+Exponent | `c = a ^ b` |  `c = a ** b`
 
 **Note**: In Python2 the division operator `/` will actually perform a floor division if the variables being divided are both integers. So whole numbers `10 / 3` gives `3` whereas floating point `10.0 / 3.0` gives `3.33` recurring. You can also force floor division using the `//` operator if needed.
 
