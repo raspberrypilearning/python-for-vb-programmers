@@ -678,7 +678,7 @@ import math
 
 x = 5
 y = 10
-hypotenuse = math.sqrt((x - x) + (y - y))
+hypotenuse = math.sqrt((x * x) + (y * y))
 ```
 
 ```python
