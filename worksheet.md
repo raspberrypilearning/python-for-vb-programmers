@@ -1,4 +1,4 @@
-# Introduction
+# Python for Visual Basic programmers
 
 Python is a widely-used high level programming language. Its elegant syntax allows you to clearly define application behaviour using fewer lines of code than would be required in other languages like VB. It supports multiple programming paradigms including imperative, functional and object oriented styles, allowing a wide range of tasks to be performed.
 
