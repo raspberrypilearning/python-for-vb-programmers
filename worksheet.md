@@ -18,7 +18,9 @@ Raspbian does not come with Geany so you have to install it.
 
 To do this open up LXTerminal and enter the command below:
 
-`sudo apt-get install geany`
+```bash
+sudo apt-get install geany
+```
 
 After the installation has completed you should find Geany inside the 'Programming' folder of the launcher menu. To start a new Python program go to File > New (with Template) > main.py
 
@@ -34,7 +36,7 @@ print "hello world"
 
 If you prefer the command line you can easily create a Python program using nano or vim; these are terminal-based text editors. For example, enter the following command:
 
-```
+```bash
 nano test.py
 ```
 
@@ -47,7 +49,7 @@ print "hello world"
 
 Press `Ctrl + O` to save then `Ctrl + X` to quit. Next, mark the file as executable and then run it.
 
-```
+```bash
 chmod +x test.py
 ./test.py
 ```
