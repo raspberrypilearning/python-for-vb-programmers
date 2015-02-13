@@ -12,7 +12,7 @@ This introduction is intended to help a Visual Basic programmer apply their exis
 
 You may already have a preferred programming environment (the program to write code in); if you do not, Geany is recommended.
 
-[![](./images/geany.png)](http://www.geany.org/)
+[![](images/geany.png)](http://www.geany.org/)
 
 You should find Geany inside the 'Programming' folder of the launcher menu. To start a new Python program go to File > New (with Template) > main.py
 
