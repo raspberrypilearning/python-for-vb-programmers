@@ -1,4 +1,4 @@
-## Introduction
+# Introduction
 
 Python is a widely-used high level programming language. Its elegant syntax allows you to clearly define application behaviour using fewer lines of code than would be required in other languages like VB. It supports multiple programming paradigms including imperative, functional and object oriented styles, allowing a wide range of tasks to be performed.
 
@@ -684,13 +684,3 @@ cursor.execute("SELECT - FROM TABLE")
 ```
 
 For a more extensive list of Python modules please visit this page: https://wiki.python.org/moin/UsefulModules
-
-## Licence
-
-Unless otherwise specified, everything in this repository is covered by the following licence:
-
-![Creative Commons License](http://i.creativecommons.org/l/by-sa/4.0/88x31.png)
-
-***Python for Visual Basic Programmers*** by the [Raspberry Pi Foundation](http://raspberrypi.org) is licenced under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
-
-Based on a work at https://github.com/raspberrypilearning/python-for-vb-programmers
