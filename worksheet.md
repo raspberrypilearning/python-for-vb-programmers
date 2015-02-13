@@ -14,15 +14,7 @@ You may already have a preferred programming environment (the program to write c
 
 [![](./images/geany.png)](http://www.geany.org/)
 
-Raspbian does not come with Geany so you have to install it.
-
-To do this open up LXTerminal and enter the command below:
-
-```bash
-sudo apt-get install geany
-```
-
-After the installation has completed you should find Geany inside the 'Programming' folder of the launcher menu. To start a new Python program go to File > New (with Template) > main.py
+You should find Geany inside the 'Programming' folder of the launcher menu. To start a new Python program go to File > New (with Template) > main.py
 
 Geany populates this with some template text (a copyright statement) and some function blocks at the bottom, but you can delete everything except the first line to start afresh. The first line is important because it denotes the file as a Python program. The cogs icon at the top is the familiar run button (F5) similar to Visual Basic.
 
