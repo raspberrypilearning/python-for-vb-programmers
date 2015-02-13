@@ -583,7 +583,7 @@ In Python a class first needs to be defined with the `class` statement followed 
 
 When you define functions inside a class the `self` object must always be specified as the first parameter. You don't have to explicitly specify it when calling the functions; Python does this behind the scenes for you.
 
-There is also no concept of `Public` or `Private` class members in Python. Everything is public, therefore the `setName` and `getName` functions below are redundant; they remain only for comparison to the Visual Basic code.
+There is also no concept of `Public` or `Private` class members in Python. Everything is public, therefore the `set_name` and `get_name` functions below are redundant; they remain only for comparison to the Visual Basic code.
 
 - Python `person.py`
 
@@ -609,7 +609,7 @@ Instead of a private variable `m_name` with public get and set functions you can
 from person import *
 
 obj = Person()
-obj.name = "David" # or also; obj.setName("David")
+obj.name = "David" # or also; obj.set_name("David")
 obj.display()
 ```
 
