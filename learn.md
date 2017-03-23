@@ -13,3 +13,6 @@ By reading this resource you will learn:
   - Error handling
   - Object oriented programming
 - How to handle libraries and references (e.g. DLLs)
+
+This resource covers elements from the following strands of the [Raspberry Pi Digital Making Curriculum](https://www.raspberrypi.org/curriculum/):
+
