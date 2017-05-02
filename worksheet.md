@@ -1,5 +1,7 @@
 # Python for Visual Basic programmers
 
+**This is an archived resource.** The repo will remain available but the resource will no longer be maintained or updated. Some or all parts of the resource may no longer work. To see our latest resources, please visit [raspberrypi.org](http://www.raspberrypi.org). 
+
 Python is a widely-used high level programming language. Its elegant syntax allows you to clearly define application behaviour using fewer lines of code than would be required in other languages like VB. It supports multiple programming paradigms including imperative, functional and object oriented styles, allowing a wide range of tasks to be performed.
 
 As a Visual Basic programmer, the first thing you will notice is the lack of the form designer; Python is programmed in text only. You could still write desktop applications with buttons and menus, but the form layout must be described in code. This is, however, outside the scope of this document. Programs written in Python often don’t require a desktop interface, as will be discussed later.
